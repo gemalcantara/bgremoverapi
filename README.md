@@ -8,7 +8,7 @@
    `docker exec -ti {container name} /bin/bash` \
 * if using windows and the command above is not working try this \
   `winpty docker exec -ti {container name} /bin/bash` \
-  `npm install`
+  `npm install` \
 And your all set enjoy removing background \ 
 
 
