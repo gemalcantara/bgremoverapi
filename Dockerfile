@@ -14,7 +14,8 @@ RUN apt-get install -y curl
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
 RUN apt-get install -y nodejs
 # RUN apt-get install -y build-essential
-
+RUN apt clean && apt autoclean
+RUN apt update
 # Bundle app source
 # Trouble with COPY http://stackoverflow.com/a/30405787/2926832
 ENV NODE_ENV=production
