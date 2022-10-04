@@ -4,13 +4,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+const cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var indexRouter = require('./routes/api');
 var usersRouter = require('./routes/users');
 
 var app = express();
-
+app.use(cors({
+    origin: '*'
+}));
 // configure the app to use bodyParser()
 app.use(bodyParser.urlencoded({
     extended: true
