@@ -2,10 +2,12 @@
 
 **Setup** 
 
-* Go inside the project folder where dockerfile is located and run \
-   `docker build -t {name of image} .` \
-   `docker run -d --name {container name} -p {port}:3000 --restart unless-stopped {name of image}` \
-   `docker exec -ti {container name} /bin/bash` 
+* Go inside the project folder where dockerfile is located and run
+  ```
+    docker build -t bg-remover-api .
+    docker run -d --name bg-remover-api-container -p 4545:3000 --restart unless-stopped bg-remover-api
+    docker exec -ti bg-remover-api-container /bin/bash
+  ```
 * if using windows and the command above is not working try this \
   `winpty docker exec -ti {container name} /bin/bash` \
   `npm install` \
